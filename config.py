@@ -4,7 +4,7 @@ class Config:
     '''
     General configuration parent class
     '''
-    SECRET_KEY=os.environ.get('SECRET_KEY')
+    SECRET_KEY=os.environ.get('7457465fhcdcbdfgcdfrtr')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     UPLOADED_PHOTOS_DEST = 'app/static/photos'
 
@@ -15,7 +15,7 @@ class Config:
     MAIL_USERNAME = os.environ.get("MAIL_USERNAME")
     MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
     SUBJECT_PREFIX = 'New Blog'
-    SENDER_EMAIL = 'wendosam21@gmail.com'
+    SENDER_EMAIL = 'jumbamathews6@gmail.com'
 
     # simple mde configurations
     SIMPLEMDE_JS_IIFE = True
@@ -32,13 +32,13 @@ class ProdConfig(Config):
     SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
 
 class TestConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://sam:54321@localhost/blog_test'
+    SQLALCHEMY_DATABASE_URI = 'postgres://cmsowuzzgjvjqm:c80ad4e60db4386975bd289b809ca05ddc753effc04059da0d8151f686e8c2be@ec2-184-73-209-230.compute-1.amazonaws.com:5432/d1gnev69cdiqu'
 
 class DevConfig(Config):
     '''
     Development configuration child class
     '''
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://sam:54321@localhost/blog'
+    SQLALCHEMY_DATABASE_URI = 'postgres://cmsowuzzgjvjqm:c80ad4e60db4386975bd289b809ca05ddc753effc04059da0d8151f686e8c2be@ec2-184-73-209-230.compute-1.amazonaws.com:5432/d1gnev69cdiqu'
     DEBUG = True
 
 config_options = {
